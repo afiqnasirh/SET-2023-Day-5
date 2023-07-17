@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+a {
+  all: unset;
+}
+
+body {
+  font-family: Poppins;
+  background-color: #e9ecef;
+  color: #343a40;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header .menu-items,
+footer .menu-items {
+  display: flex;
+  gap: 20px;
+}
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo h1 {
+  font-weight: 500;
+  font-size: 24px;
+}
+header .logo .img {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header .menu-items .search {
+  background-color: white;
+  border-radius: 100px;
+}
+
+header .menu-items input {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+header button {
+  display: none;
+}
+
+/* main */
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.price {
+  font-size: 30px;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer */
+footer {
+  background-color: #ced4da;
+  border-top: 5px solid;
+}
+footer .menu-items {
+  font-size: 20px;
+  display: flex;
+  gap: 100px;
+  text-transform: capitalize;
+}
+footer button {
+  text-decoration: underline;
+}
+
+/* mobile css */
+/* 800px & below */
+@media (max-width: 800px) {
+  header .menu-items {
+    display: none;
+  }
+
+  .price {
+    left: 50%;
+    transform: translateX(-50);
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    gap: 20px;
+  }
+
+  footer button {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+  }
+}
+
+@media print {
+  button {
+    display: none;
+  }
+}
